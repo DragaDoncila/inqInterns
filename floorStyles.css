@@ -80,33 +80,20 @@ body{
     /*right: 0;*/
 /*}*/
 
-.fuselage {
+.wall {
     /*width: 600px;*/
     border-right: 5px solid #d8d8d8;
     border-left: 5px solid #d8d8d8;
 }
 
-ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.seats {
-    display: block;
-    /*flex-direction: row;*/
-    /*flex-wrap: nowrap;*/
-    /*justify-content: flex-start;*/
-    height: 80px;
-}
-
-.seat {
-    display: block;
+.desk {
+    display: inline-block;
     padding: 15px;
     position: relative;
+    width: 250px;
 }
 
-.seat label{
+.desk label{
     height: 75px;
 }
 
@@ -114,26 +101,26 @@ ol {
     /*margin-right: 14.28571428571429%;*/
 /*}*/
 
-.seat input[type=checkbox] {
+.desk input[type=checkbox] {
     position: absolute;
     opacity: 0;
 }
 
-.seat input[type=checkbox]:checked + label {
-    background: #bada55;
+.desk input[type=checkbox]:checked + label {
+    background: #c52bda;
     -webkit-animation-name: rubberBand;
     animation-name: rubberBand;
     animation-duration: 300ms;
     animation-fill-mode: both;
 }
 
-.seat input[type=checkbox]:disabled + label {
+.desk input[type=checkbox]:disabled + label {
     background: #dddddd;
     text-indent: -9999px;
     overflow: hidden;
 }
 
-.seat input[type=checkbox]:disabled + label:after {
+.desk input[type=checkbox]:disabled + label:after {
     content: "X";
     text-indent: 0;
     position: absolute;
@@ -142,12 +129,12 @@ ol {
     transform: translate(-50%, 0%);
 }
 
-.seat input[type=checkbox]:disabled + label:hover {
+.desk input[type=checkbox]:disabled + label:hover {
     box-shadow: none;
     cursor: not-allowed;
 }
 
-.seat label {
+.desk label {
     display: block;
     position: relative;
     width: 100%;
@@ -156,13 +143,13 @@ ol {
     font-weight: bold;
     line-height: 1.5rem;
     padding: 4px 0;
-    background: #F42536;
+    background: #54c335;
     border-radius: 5px;
     animation-duration: 300ms;
     animation-fill-mode: both;
 }
 
-.seat label:before {
+.desk label:before {
     content: "";
     position: absolute;
     width: 75%;
@@ -174,7 +161,7 @@ ol {
     border-radius: 3px;
 }
 
-.seat label:hover {
+.desk label:hover {
     cursor: pointer;
     box-shadow: 0 0 0px 2px #5C6AFF;
 }
